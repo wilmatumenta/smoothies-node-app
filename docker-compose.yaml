@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nodejs-version1  
+    ports:
+      - 3000:3000
+  nginx:
+    image: nginx
+    ports:
+      - 80:80
+    depends_on:
+      - web

@@ -27,10 +27,16 @@ export default function Box() {
                 </div>
                 <div className="flex items-center justify-center h-30 py-6">
                     <div className="hover:bg-purple-500 bg-purple-700 text-white font-bold rounded-lg border shadow-lg p-10 shadow-lime-400">
-                        <h1>KIWI FRUIT SMOOTHIE</h1>
+                        <h1>PEACH-MANGO SMOOTHIE</h1>
                         <p>STEP 1</p>
-                        <li>add 2 bananas in a blender</li>
-                        <li>add milk</li>
+                        <li>1/3 cup coconut water</li>
+                        <li>1/2 plain Greek yogurt</li>
+                        <li>1 cup frozen sliced peaches</li>
+                        <li>1 cup frozen mango chunks</li>
+                        <p>STEP 2</p>
+                        <li>Add coconut water, peaches, mango and yogurt to blender</li>
+                        <li>Puree until smooth</li>
+                        <li>ENJOY!</li>
                     </div>
                 </div>
             </div>
