@@ -3,8 +3,11 @@ pipeline {
     dockerfile true
   }
   stages {
-    stage ('example'){
-           echo 'hello world'
+        stage('Test') {
+            steps {
+                sh 'node --version'
+                sh 'svn --version'
+            }
+        }
     }
-  }
 }
