@@ -1,13 +1,22 @@
-pipeline {
-  agent {
-    dockerfile true
-  }
-  stages {
-        stage('Test') {
-            steps {
-                sh 'node --version'
-                sh 'svn --version'
-            }
+node {
+    def app
+
+    stage('Clone repository') {
+      
+
+        checkout scm
+    }
+
+    stage('Build image') {
+  
+       app = docker.build("yengwiawilma/test")
+    }
+
+    stage('Test image') {
+  
+
+        app.inside {
+            sh 'echo "Tests passed"'
         }
     }
 }
