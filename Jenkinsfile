@@ -1,22 +1,12 @@
-node {
-    def app
-
-    stage('Clone repository') {
-      
-
-        checkout scm
+pipeline {
+    agent {
+        dockerfile true
     }
-
-    stage('Build image') {
-  
-       app = docker.build("yengwiawilma/test")
-    }
-
-    stage('Test image') {
-  
-
-        app.inside {
-            sh 'echo "Tests passed"'
+    stages {
+        stage('exampple'){
+            steps {
+                sh 'echo "hellpw"'
+            }
         }
     }
 }
